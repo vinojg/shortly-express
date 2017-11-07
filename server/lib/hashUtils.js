@@ -27,6 +27,7 @@ exports.createHash = (data, salt = '') => {
  * matches the stored value.
  */
 exports.compareHash = (attempted, stored, salt) => {
+  console.log('INSIDE HELPER COMPARE', this.createHash(attempted, salt), stored);
   return stored === this.createHash(attempted, salt);
 };
 
